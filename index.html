@@ -7,11 +7,13 @@
 		<title>Presentation</title>
 
 		<!-- Define icon -->
-		<link rel=icon href=/assets/images/icon_V.svg>
+		<link rel="shortcut icon" href="/assets/images/favicon.ico">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+
+<!-- TODO: Do something with the icon, implement font awesome.-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -22,8 +24,8 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						# Text in markdown
-						Nothing without the logo.
+						# Text in markdown   
+						Nothing without the logo.   
 						<img src="/assets/images/Logo_EPFL.svg" alt="EPFL logo" width="200"/> 
 					</textarea>
 				</section>
@@ -37,8 +39,28 @@
 				<section data-markdown>
 					<textarea data-template>
 						## A nice graph
-						<iframe class="r-stretch" data-src="/assets/plots/solar_spectrum.html" data-preload></iframe> 
+						<iframe class="r-stretch" data-src="/assets/plots/solar_spectrum.html" data-preload></iframe> <br/>
+						Play with me!
 					</textarea>
+				</section>
+
+				<section>
+					<h2>Some random <u>Font Awesome</u> icons</h2><br/>
+					<h3>
+						<i class="fas fa-drumstick-bite"></i> 
+						<i class="fas fa-pastafarianism"></i> 
+						<i class="fas fa-viruses"></i>
+					</h3><br/>
+					<h3>
+						<i class="far fa-building"></i> 
+						<i class="far fa-eye"></i> 
+						<i class="far fa-thumbs-down"></i>
+					</h3><br/>
+					<h3>
+						<i class="fab fa-angular"></i> 
+						<i class="fab fa-optin-monster"></i> 
+						<i class="fab fa-ubuntu"></i>
+					</h3><br/>
 				</section>
 
 				<section>
@@ -51,9 +73,28 @@
 					\end{aligned} \]
 				</section>
 
+				<section>
+					<!--- TODO: See how to break into parts for the QR code ---> 
+					<h1>Thank you for your attention!</h1>
+					Presentation available at <a href="https://vskorjanc.github.io/">vskorjanc.github.io</a><br/>
+					<img src="/assets/images/qr-code.svg" alt="qr-code" width="150"/>
+				</section>
 
 			</div>
 		</div>
+
+		<!-- 
+			Font Awesome
+			Use <i> element to reference an icon (and <em> to emphasize/italicize)
+			Use "fas" for solid, "fab" for brands, and "far" for regular.
+			e. g. <i class="fas fa-camera"></i>  
+			Available icons can be checked at /node_modules/@fortawesome/fontawesome-free/svgs
+			or https://fontawesome.com/cheatsheet/free/solid
+		-->
+		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+
+
+
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
