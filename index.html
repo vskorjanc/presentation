@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Presentation</title>
+
+		<!-- Define icon -->
+		<link rel=icon href=/assets/images/icon_V.svg>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,15 +19,47 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						# Text in markdown
+						Nothing without the logo.
+						<img src="/assets/images/Logo_EPFL.svg" alt="EPFL logo" width="200"/> 
+					</textarea>
+				</section>
+
+				<section>
+					<section>Nested slide 1</section>
+					<section>Nested slide 2</section>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						## A nice graph
+						<iframe class="r-stretch" data-src="/assets/plots/solar_spectrum.html" data-preload></iframe> 
+					</textarea>
+				</section>
+
+				<section>
+					<h2> And some formulae</h2>					
+					\[ \begin{aligned}
+					E &amp; = \frac{h c}{\lambda} \\
+					B (\lambda , T) &amp; = \frac{2 h c^2}{\lambda^5} \cdot \frac{1}{\exp{\frac{h c}{\lambda k_B T}} - 1}\\
+					\theta (\lambda) &amp; = \frac{\frac{h c}{\lambda_t}}{\frac{h c}{\lambda}} = \frac{\lambda}{\lambda_t}\\
+					\Theta &amp; = \frac{\int_{0}^{\lambda_t} B (\lambda) \frac{\lambda}{\lambda_t} \,d\lambda}{\int_{0}^{\infty} B (\lambda) \,d\lambda} 
+					\end{aligned} \]
+				</section>
+
+
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +68,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealMath, RevealNotes, RevealZoom ]
 			});
 		</script>
 	</body>
