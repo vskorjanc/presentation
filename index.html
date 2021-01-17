@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Presentation</title>
+		<title>Template</title>
 
 		<!-- Define icon -->
 		<link rel="shortcut icon" href="/assets/images/favicon.ico">
@@ -14,12 +14,14 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
 
-<!-- TODO: Do something with the icon, implement font awesome.-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
 	<body>
+		<!-- use data-src for lazy loading content (image, video...) within the viewDistance (3 slides).
+			iframes need to have data-preload attribute for lazy loading, otherwise they are loaded at the moment
+			the slide is shown (which is important for e.g. vieo).-->
 		<div class="reveal">
 			<div class="slides">
 
@@ -27,7 +29,7 @@
 					<textarea data-template>
 						# Text in markdown   
 						Nothing without the logo.   
-						<img src="/assets/images/Logo_EPFL.svg" alt="EPFL logo" width="200"/> 
+						<img data-src="/assets/images/Logo_EPFL.svg" alt="EPFL logo" width="200"/> 
 					</textarea>
 				</section>
 
@@ -39,7 +41,7 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						## A nice graph
+						## A nice interactive graph
 						<iframe class="r-stretch" data-src="/assets/plots/solar_spectrum.html" data-preload></iframe> <br/>
 						Play with me!
 					</textarea>
@@ -78,7 +80,7 @@
 					<!--- TODO: See how to break into parts for the QR code ---> 
 					<h1>Thank you for your attention!</h1>
 					Presentation available at <a href="https://vskorjanc.github.io/">vskorjanc.github.io</a><br/>
-					<img src="/assets/images/qr-code.svg" alt="qr-code" width="150"/>
+					<img data-src="/assets/images/qr-code.svg" alt="qr-code" width="150"/>
 				</section>
 
 			</div>
@@ -106,6 +108,8 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: true,
+				viewDistance: 3,
+				mobileViewDistance: 2,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealMath, RevealNotes, RevealZoom ]
