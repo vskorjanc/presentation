@@ -18,31 +18,6 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
-		<!-- Embed map -->
-		<!-- Map script -->
-		<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtDy58RhopjzpXWkmGnvb_rh1mncz5HrE&callback=initMap&libraries=&v=weekly"
-		defer
-		></script>
-	    <script>
-	      // Initialize and add the map
-	      function initMap() {
-	        // The location of Uluru
-	        const uluru = { lat: -25.344, lng: 131.036 };
-	        // The map, centered at Uluru
-	        const map = new google.maps.Map(document.getElementById("map"), {
-	          zoom: 4,
-	          center: uluru,
-	        });
-	        // The marker, positioned at Uluru
-	        const marker = new google.maps.Marker({
-	          position: uluru,
-	          map: map,
-	        });
-	      }
-    	</script>
-
-
 	</head>
 	<body>
 		<!-- use data-src for lazy loading content (image, video...) within the viewDistance (3 slides).
@@ -61,7 +36,7 @@
 
 				<section>
 					<img data-src="/assets/images/KAUST_Logo.svg" alt="KAUST Logo" width="400"/><br/>
-					<iframe class="r-stretch" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-src="https://www.openstreetmap.org/export/embed.html?bbox=11.513671875000002%2C4.083452772038619%2C66.84082031250001%2C38.788345355085625&amp;layer=mapnik&amp;marker=22.51255695405145%2C39.17724609375" style="border: none" data-preload></iframe>
+					<iframe class="r-stretch" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.513671875000002%2C4.083452772038619%2C66.84082031250001%2C38.788345355085625&amp;layer=mapnik&amp;marker=22.51255695405145%2C39.17724609375" style="border: none" data-preload></iframe>
 				</section>
 
 				<section>
