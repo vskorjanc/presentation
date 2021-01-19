@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Template</title>
+		<title>HZB round 2</title>
 
 		<!-- Define icon -->
 		<link rel="shortcut icon" href="/assets/images/favicon.ico">
@@ -17,6 +17,32 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<!-- Embed map -->
+		<!-- Map script -->
+		<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtDy58RhopjzpXWkmGnvb_rh1mncz5HrE&callback=initMap&libraries=&v=weekly"
+		defer
+		></script>
+	    <script>
+	      // Initialize and add the map
+	      function initMap() {
+	        // The location of Uluru
+	        const uluru = { lat: -25.344, lng: 131.036 };
+	        // The map, centered at Uluru
+	        const map = new google.maps.Map(document.getElementById("map"), {
+	          zoom: 4,
+	          center: uluru,
+	        });
+	        // The marker, positioned at Uluru
+	        const marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map,
+	        });
+	      }
+    	</script>
+
+
 	</head>
 	<body>
 		<!-- use data-src for lazy loading content (image, video...) within the viewDistance (3 slides).
@@ -27,43 +53,32 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						# Text in markdown   
-						Nothing without the logo.   
-						<img data-src="/assets/images/Logo_EPFL.svg" alt="EPFL logo" width="200"/> 
+						## Interplay between temperature and bandgap energies on the outdoor performance of perovskite/silicon tandem solar cells
+						#### Erkan Aydin et al.
+						*Nature Energy* **5**, 851–859 (2020) 
 					</textarea>
 				</section>
 
 				<section>
-					<section>Nested slide 1</section>
-					<section>Nested slide 2</section>
-				</section>
-
-
-				<section data-markdown>
-					<textarea data-template>
-						## A nice interactive graph
-						<iframe class="r-stretch" data-src="/assets/plots/solar_spectrum.html" data-preload></iframe> <br/>
-						Play with me!
-					</textarea>
+					<img data-src="/assets/images/KAUST_Logo.svg" alt="KAUST Logo" width="400"/>
+					<div class="r-stretch" id="map"></div>
 				</section>
 
 				<section>
-					<h2>Some random <u>Font Awesome</u> icons</h2><br/>
-					<h3>
-						<i class="fas fa-drumstick-bite"></i> 
-						<i class="fas fa-pastafarianism"></i> 
-						<i class="fas fa-viruses"></i>
-					</h3><br/>
-					<h3>
-						<i class="far fa-building"></i> 
-						<i class="far fa-eye"></i> 
-						<i class="far fa-thumbs-down"></i>
-					</h3><br/>
-					<h3>
-						<i class="fab fa-angular"></i> 
-						<i class="fab fa-optin-monster"></i> 
-						<i class="fab fa-ubuntu"></i>
-					</h3><br/>
+					<h2>Module temperature modelling</h2>
+					\[
+					T_\mathrm{m} = E \cdot e^{a + b \cdot v} + T_\mathrm{amb}
+					\]
+
+					<div class="fragment">$E$ - Sun irradiance</div>
+					<div class="fragment">$v$ - wind speed</div>
+					<div class="fragment">$a$ & $b$ - empiric parameters</div>
+					
+				</section>
+
+
+				<section>
+					<iframe class="r-stretch" data-src="assets/plots/temperature.html" data-preload></iframe>
 				</section>
 
 				<section>
@@ -77,17 +92,14 @@
 				</section>
 
 				<section>
-					<!--- TODO: See how to break into parts for the QR code ---> 
 					<h1>Thank you for your attention!</h1>
-					<div class="fragment">
-						<div class="r-hstack">
-							<div>
-								Presentation available at <br/>
-								<a href="https://vskorjanc.github.io/">vskorjanc.github.io</a>
-							</div> 
-							<div>
-								<img data-src="/assets/images/qr-code.svg" alt="qr-code" width="200"/>
-							</div>
+					<div class="r-hstack">
+						<div>
+							Presentation available at <br/>
+							<a href="https://vskorjanc.github.io/">vskorjanc.github.io</a>
+						</div> 
+						<div>
+							<img data-src="/assets/images/qr-code.svg" alt="qr-code" width="200"/>
 						</div>
 					</div>
 				</section>
@@ -124,5 +136,6 @@
 				plugins: [ RevealMarkdown, RevealMath, RevealNotes, RevealZoom ]
 			});
 		</script>
+
 	</body>
 </html>
