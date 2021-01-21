@@ -17,7 +17,15 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-
+		<style>
+		.dot {
+		height: 25px;
+		width: 25px;
+		background-color: #dc322f;
+		border-radius: 50%;
+		display: inline-block;
+		}
+		</style>
 	</head>
 	<body>
 		<!-- use data-src for lazy loading content (image, video...) within the viewDistance (3 slides).
@@ -25,22 +33,173 @@
 			the slide is shown (which is important for e.g. video).-->
 		<div class="reveal">
 			<div class="slides">
-
-				<section data-markdown>
-					<textarea data-template>
-						## Interplay between temperature and bandgap energies on the outdoor performance of perovskite/silicon tandem solar cells
-						#### Erkan Aydin et al.
-						*Nature Energy* **5**, 851–859 (2020) 
-					</textarea>
+				<section>
+					<h1>HZB interview</h1>
+					<h2>Round 2</h2>
+					<img data-src="/assets/images/potpis.png" alt="signature" height=150 data-preload/><br/>
+					<img data-src="/assets/images/Logo_EPFL.svg" alt="EPFL Logo" width="150" data-preload/><br/>
 				</section>
 
 				<section>
-					<img data-src="/assets/images/KAUST_Logo.svg" alt="KAUST Logo" width="400"/><br/>
+					<h2><span class="fragment">Interplay between <span style="color: #d33682">temperature</span> and <span style="color: #d33682">bandgap energies</span></span><span class="fragment"> on the <span style="color: #b58900">outdoor performance</span></span><span class="fragment"> of perovskite/silicon tandem solar cells</span></h2>
+					<div class="fragment"><h4>Erkan Aydin et al.</h4>
+					<em>Nature Energy</em> <b>5</b>, 851–859 (2020)</div>
+				</section>
+
+				<section>
+					<div class="r-hstack">
+						<div>
+							<img width=600 data-src="/assets/images/cover.png" alt="Cover" data-preload/>
+						</div>
+						<div>
+							<ul>
+								<li class="fragment"><u>Highest certified</u> current density for perovskite/silicon tandem</li>
+								<li class="fragment"><span class="fragment highlight-red">
+									Ideal bandgap <b>lower</b> at field testing conditions compared to standard
+								</span></li>
+							</ul>
+						</div>
+					</div>
+					<aside class="notes">
+						Achieved highest certified current density by smart light management. Ideal bandgap for perovskite subcell lower at field testing conditions compared to standard test conditions
+					</aside>
+				</section>
+
+				<section>
+					<img data-src="/assets/images/KAUST_Logo.svg" alt="KAUST Logo" width="400" data-preload/><br/>
 					<iframe class="r-stretch" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.513671875000002%2C4.083452772038619%2C66.84082031250001%2C38.788345355085625&amp;layer=mapnik&amp;marker=22.51255695405145%2C39.17724609375" style="border: none" data-preload></iframe>
+					<aside class="notes">
+						Work of the group lead by Prof. Stefaan De Wolf. The testing took place on the KAUST campus, near the village of Thuwal, Saudi Arabia.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Module temperature modelling</h2>
+					<h1>Motivation</h1>
+				</section>
+
+				<section>
+					<h2>Efficiency limit</h2>
+					<div class="r-hstack">
+						<div>
+							<img height=500 data-src="/assets/images/efficiency_limit.jpg" alt="Efficiency limit" data-preload/>
+						</div>
+						<div>
+							<div>Silicon: 1.1 eV</div>
+							<div class="fragment" data-fragment-index="1">&#8595;</div>
+							<div class="fragment" data-fragment-index="1">Perovskite: 1.7 eV</div>
+						</div>
+					</div>
+					<small><em>Nat. Rev. Chem.</em> <b>1</b> 0095 (2017)</small>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h2>Tuning the bandgap</h2>
+						<div class="r-hstack">
+							<div style="width: 200px; height: 200px;" data-id="MAPI">
+								<div>1.6 eV</div>
+								<div class="dot"></div>
+								<div>MAPbI<sub>3</sub></div>
+							</div>
+						</div>
+						<p><small data-id="ref_01"><em>Chem. Sci.</em> <b>6</b> 613-617 (2015)</small></p>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Tuning the bandgap</h2>
+						<div class="r-hstack">
+							<div style="width: 200px; height: 200px;" data-id="MAPI">
+								<div>1.6 eV</div>
+								<div class="dot"></div>
+								<div>MAPbI<sub>3</sub></div>
+							</div>
+							<div style="width: 200px; height: 200px;" data-id="MAPBr">
+								<div>2.3 eV</div>
+								<div class="dot"></div>
+								<div>MAPbBr<sub>3</sub></div>
+							</div>
+						</div>
+						<p><small data-id="ref_01"><em>Chem. Sci.</em> <b>6</b> 613-617 (2015)</small></p>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Tuning the bandgap</h2>
+						<div class="r-hstack">
+							<div style="width: 200px; height: 200px;" data-id="MAPI">
+								<div>1.6 eV</div>
+								<div class="dot"></div>
+								<div>MAPbI<sub>3</sub></div>
+							</div>
+							<div data-id="dot" style="width: 200px; height: 100px;">
+								<div class="dot"></div>
+							</div>
+							<div style="width: 200px; height: 100px;">
+								<div class="dot"></div>
+							</div>
+							<div style="width: 200px; height: 100px;">
+								<div class="dot"></div>
+							</div>
+							<div style="width: 200px; height: 200px;" data-id="MAPBr">
+								<div>2.3 eV</div>
+								<div class="dot"></div>
+								<div>MAPbBr<sub>3</sub></div>
+							</div>
+						</div>
+						<p><small data-id="ref_01"><em>Chem. Sci.</em> <b>6</b> 613-617 (2015)</small></p>
+					</section>
+
+					<section data-auto-animate>
+						<h2>Tuning the bandgap</h2>
+						<div class="r-hstack">
+							<div style="width: 200px; height: 200px;" data-id="MAPI">
+								<div>1.6 eV</div>
+								<div class="dot"></div>
+								<div>MAPbI<sub>3</sub></div>
+							</div>
+							<div>
+								<div>Br > 20 % not stable<br/><i class="fas fa-sad-tear"></i></div>
+							</div>
+							<div style="width: 200px; height: 200px;" data-id="MAPBr">
+								<div>2.3 eV</div>
+								<div class="dot"></div>
+								<div>MAPbBr<sub>3</sub></div>
+							</div>
+						</div>
+						<p><small data-id="ref_01"><em>Chem. Sci.</em> <b>6</b> 613-617 (2015)</small></p>
+					</section>
+				</section>
+
+
+				<section>
+					<h2 data-id="temp_dep">Temperature dependence of <em>E</em><sub>g</sub></h2>
+					<p><ul>
+						<li class="fragment" data-fragment-index="1">
+							<span class="fragment highlight-red" data-fragment-index="3">Electron-phonon coupling</span><span class="fragment" data-fragment-index="2"> - silicon</span>
+						</li>
+						<li class="fragment" data-fragment-index="4"><span class="fragment highlight-blue" data-fragment-index="6">Thermal dilatation</span><span class="fragment" data-fragment-index="5"> - perovskite</span>
+						</li>
+					</ul></p>
+					<p><small data-id="ref_02"><em>J. Phys. Chem. Lett.</em> <b>10</b> 1368–1373 (2019)</small></p>
+					<aside class="notes">For most semiconductors the thermal dilatation is negligible and the bandgap decreases with temperature, but for perovskite the thermal dilatation of the lattice is extraordinary high, and overrules the electron-phonon coupling effect.</aside>
+				</section>
+
+
+				<section>
+					<img height=500 data-src="/assets/images/efficiency_limit.jpg" alt="Efficiency limit" data-preload/><br/>
+					<small><em>Nat. Rev. Chem.</em> <b>1</b> 0095 (2017)</small>
+				</section>
+
+				<section>
+					<h1>Results</h1>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Outdoor measurements</h2>
+					<iframe class="r-stretch" data-src="/assets/plots/temperature.html" data-preload></iframe>
+				</section>
+
+				<section>
+					<h2>Cell temperature modelling</h2>
 					\[
 					T_\mathrm{m} = E \cdot e^{a + b \cdot v} + T_\mathrm{amb}
 					\]
@@ -48,22 +207,69 @@
 					<div class="fragment">$E$ - Sun irradiance</div>
 					<div class="fragment">$v$ - wind speed</div>
 					<div class="fragment">$a$ & $b$ - empirically determined coefficients</div>
-					
-				</section>
-
-
-				<section>
-					<iframe class="r-stretch" data-src="assets/plots/temperature.html" data-preload></iframe>
 				</section>
 
 				<section>
-					<h2> And some formulae</h2>					
-					\[ \begin{aligned}
-					E &amp; = \frac{h c}{\lambda} \\
-					B (\lambda , T) &amp; = \frac{2 h c^2}{\lambda^5} \cdot \frac{1}{\exp{\frac{h c}{\lambda k_B T}} - 1}\\
-					\theta (\lambda) &amp; = \frac{\frac{h c}{\lambda_t}}{\frac{h c}{\lambda}} = \frac{\lambda}{\lambda_t}\\
-					\Theta &amp; = \frac{\int_{0}^{\lambda_t} B (\lambda) \frac{\lambda}{\lambda_t} \,d\lambda}{\int_{0}^{\infty} B (\lambda) \,d\lambda} 
-					\end{aligned} \]
+					<img class="r-stretch" data-src="/assets/images/prediction.png" alt="Prediction" data-preload/>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Outdoor measurements</h2>
+					<iframe class="r-stretch" data-src="https://aydin-nature-plot.herokuapp.com/" data-preload></iframe>
+				</section>
+
+				<section>
+					<h2>Indoor measurements</h2>
+					<img class="r-stretch" data-src="/assets/images/EQE_1.png" alt="EQE 1" data-preload/>
+				</section>
+
+				<section>
+					<img class="r-stretch" data-src="/assets/images/EQE_2.png" alt="EQE 2" data-preload/>
+				</section>
+
+				<section>
+					<h2 data-id="temp_dep">Temperature dependence of <em>E</em><sub>U</sub></h2>
+					<p class="fragment"> $\alpha (E) = \alpha_0 \exp{\frac{E - E_\mathrm{0}}{E_\mathrm{U}}} $</p>
+					<p class="fragment"> $E_\mathrm{U} (T) =\ $<span class="fragment highlight-current-red">$ E_\mathrm{U} (0)\ $</span>$+\ $<span class="fragment highlight-red">$\frac{2 E_\mathrm{U} (0)}{\exp{(\theta_\mathrm{E} / T)}-1}$</span></p>
+					<br/>
+					<p><small data-id="ref_02"><em>J. Phys. Chem. Lett.</em> <b>10</b> 1368–1373 (2019)</small></p>
+					<aside class="notes">
+						In order to model temperature dependence of PCE, exponential Urbach band tailing was taken into account.<br/>
+						Perovskite Urbach energy can be written as a sum of two components - static component (intrinsic disorder of the material),
+						and phonon contribution (how vibrations influence the electrical properties). $\theta_E$ - Einstein phonon temperature.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Modelling</h2>
+					<img class="r-stretch" data-src="/assets/images/model_1.png" alt="Model 1" data-preload/>
+				</section>
+
+				<section>
+					<img class="r-stretch" data-src="/assets/images/model_2.png" alt="Model 2" data-preload/>
+					<aside class="notes">Applied the temperature-dependent radiative limit model to determine the PCE at different temperatures.</aside>
+				</section>
+
+				<section>
+					<h1>Outlook</h1>
+				</section>
+
+				<section>
+					<h2>Standard test conditions</h2>
+				</section>
+
+				<section>
+					<h2>Address decline in output</h2>
+					<iframe class="r-stretch" data-src="https://aydin-nature-plot.herokuapp.com/" data-preload></iframe>
+				</section>
+
+				<section>
+					<h1>Pros & cons</h1>
+				</section>
+
+				<section>
+					<h2>Real-world conditions?</h2>
+					<iframe class="r-stretch" data-src="https://aydin-nature-plot.herokuapp.com/" data-preload></iframe>
 				</section>
 
 				<section>
