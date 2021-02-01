@@ -193,20 +193,60 @@
 					<h1>Results</h1>
 				</section>
 
-				<section data-auto-animate>
+				<section>
 					<h2>Outdoor measurements</h2>
 					<iframe class="r-stretch" data-src="/assets/plots/temperature.html" data-preload></iframe>
 				</section>
 
-				<section>
+				<section data-auto-animate>
 					<h2>Cell temperature modelling</h2>
-					\[
-					T_\mathrm{m} = E \cdot e^{a + b \cdot v} + T_\mathrm{amb}
-					\]
+					<div data-id="formula">
+						\[
+						T_\mathrm{m} = E \cdot e^{a + b \cdot v} + T_\mathrm{amb}
+						\]
+					</div>
+					<div data-id="E" style="visibility: hidden;">$\color{red}E$ - Sun irradiance</div>
+					<div data-id="v" style="visibility: hidden;">$v$ - wind speed</div>
+					<div data-id="ab" style="visibility: hidden;">$\color{red}a$ & $\color{red}b$ - empirically determined coefficients</div>
+				</section>
 
-					<div class="fragment">$E$ - Sun irradiance</div>
-					<div class="fragment">$v$ - wind speed</div>
-					<div class="fragment">$a$ & $b$ - empirically determined coefficients</div>
+				<section data-auto-animate>
+					<h2>Cell temperature modelling</h2>
+					<div data-id="formula">
+						\[
+						T_\mathrm{m} = \color{red}E \cdot e^{a + b \cdot v} + T_\mathrm{amb}
+						\]
+					</div>
+
+					<div data-id="E">$\color{red}E$ - Sun irradiance</div>
+					<div data-id="v" style="visibility: hidden;">$\color{red}v$ - wind speed</div>
+					<div data-id="ab" style="visibility: hidden;">$\color{red}a$ & $\color{red}b$ - empirically determined coefficients</div>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Cell temperature modelling</h2>
+					<div data-id="formula">
+						\[
+						T_\mathrm{m} = E \cdot e^{a + b \cdot \color{red}{v}} + T_\mathrm{amb}
+						\]
+					</div>
+
+					<div data-id="E">$E$ - Sun irradiance</div>
+					<div data-id="v">$\color{red}v$ - wind speed</div>
+					<div data-id="ab" style="visibility: hidden;">$\color{red}a$ & $\color{red}b$ - empirically determined coefficients</div>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Cell temperature modelling</h2>
+					<div data-id="formula">
+						\[
+						T_\mathrm{m} = E \cdot e^{\color{red}a + \color{red}b \cdot v} + T_\mathrm{amb}
+						\]
+					</div>
+
+					<div data-id="E">$E$ - Sun irradiance</div>
+					<div data-id="v">$v$ - wind speed</div>
+					<div data-id="ab">$\color{red}a$ & $\color{red}b$ - empirically determined coefficients</div>
 				</section>
 
 				<section>
