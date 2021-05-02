@@ -20,7 +20,7 @@ var RevealMapbox = window.RevealMapbox || (function(){
 		mapboxgl.accessToken = options.accessToken;
 		return new mapboxgl.Map({
 			container: mapContainer,
-			style: 'mapbox://styles/mapbox/satellite-v9'
+			style: 'mapbox://styles/mapbox/light-v9'
 			// style: 'mapbox://styles/vskorjanc/cko3yb3yz0pwc18ljupjvz3in'
 		});
 	}
